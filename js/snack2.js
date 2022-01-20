@@ -11,4 +11,30 @@ function getRndNum(min, max) {
     return rndNum
 }
 
-console.log(getRndNum(1, 100))
+/* console.log(getRndNum(1, 100)) */
+
+//# Svolgimento
+
+const squads = [
+    { name: "Juventus", totpoints: 0, totfouls: 0 },
+    { name: "Inter", totpoints: 0, totfouls: 0 },
+    { name: "Milan", totpoints: 0, totfouls: 0 },
+];
+
+
+
+let newSquads = [];
+
+for (let i = 0; i < squads.length; i++) {
+    const currentSquad = squads[i];
+    let { name, totpoints, totfouls } = currentSquad;
+
+    totpoints = getRndNum(1, 100);
+
+    totfouls = getRndNum(1, 20);
+
+
+    newSquads.push({ name, totfouls });
+}
+
+console.table(newSquads)
