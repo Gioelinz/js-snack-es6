@@ -12,6 +12,7 @@ function getRndNum(min, max) {
 }
 
 /* console.log(getRndNum(1, 100)) */
+const displayElement = document.getElementById('display-bikes');
 
 //# Svolgimento
 
@@ -35,6 +36,16 @@ for (let i = 0; i < squads.length; i++) {
 
 
     newSquads.push({ name, totfouls });
+
+
+    const liSquads = document.createElement('li');
+    const strong = document.createElement('strong');
+    strong.append(name);
+    liSquads.append('Nome Squadra: ');
+    liSquads.appendChild(strong)
+    liSquads.append(` Falli subiti: ${totfouls}`);
+    liSquads.classList.add('list-group-item');
+    displayElement.appendChild(liSquads);
 }
 
 console.table(newSquads)
