@@ -24,3 +24,6 @@ const bestStudents = students.filter((student) => student.votes > 70 ? true : fa
 
 console.log(bestStudents);
 
+const bestStudentsUpperId = students.filter((student) => student.votes > 70 && student.id > 120 ? true : false);
+
+console.log(bestStudentsUpperId);
