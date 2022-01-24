@@ -17,7 +17,7 @@ const students = [
     { id: 157, name: 'Giuseppe', votes: 71 },
 ];
 
-const upperStudents = students.map((student) => student.name.toUpperCase());
+const upperStudents = students.map((student) => student.name.charAt(0).toUpperCase() + student.name.substring(1));
 console.log(upperStudents);
 
 const bestStudents = students.filter((student) => student.votes > 70 ? true : false);
